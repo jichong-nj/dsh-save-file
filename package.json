@@ -1,0 +1,40 @@
+{
+  "name": "@jichong/dsh-save-file",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Per-file download buttons for the DSH Web GUI: a save button on every row of the built-in Files tab and in the document preview header, streamed through the built-in workspaceFiles RPC",
+  "license": "MIT",
+  "author": "jichong-nj",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jichong-nj/dsh-save-file.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jichong-nj/dsh-save-file/issues"
+  },
+  "homepage": "https://github.com/jichong-nj/dsh-save-file#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
